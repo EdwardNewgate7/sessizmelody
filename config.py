@@ -43,7 +43,7 @@ class Config:
         )
 
         # Sessions
-        self.SESSION1 = getenv("SESSION1", "AQJWeTkAukuGJzEaxVO4E1JrcUcx6z_UOQMosvLf_nCkK-IXYnBXQvI5qjya_LQSQQCLXITmPUgK7HkTCMsyDzKdunD6sQtuWNZ480NM61MjTdwaa95TfNwLDF2x-LevuAYjv2tIwrU29fdShN2D1qiUqevSrk0yQdozENIhU5AoAtjVzIQnW0LN2AMkWapki9E4sr__VCapU6oe7Ysw-9wzSc8Z-mq0S24jlf5p4GvWZAgLfuilSGryU9ugWTctHCFTPL1ty9ypNsRdMlDQ33bmoYvmsnl4im9TD335D6beg5rb9Z6kkghqRRDpLAn7ZXVf9MNwErc1IAlXXVlbCsT3hQi7YgAAAAIFscYJAA ")
+        self.SESSION1 = getenv("SESSION1", "AQJWeTkAukuGJzEaxVO4E1JrcUcx6z_UOQMosvLf_nCkK-IXYnBXQvI5qjya_LQSQQCLXITmPUgK7HkTCMsyDzKdunD6sQtuWNZ480NM61MjTdwaa95TfNwLDF2x-LevuAYjv2tIwrU29fdShN2D1qiUqevSrk0yQdozENIhU5AoAtjVzIQnW0LN2AMkWapki9E4sr__VCapU6oe7Ysw-9wzSc8Z-mq0S24jlf5p4GvWZAgLfuilSGryU9ugWTctHCFTPL1ty9ypNsRdMlDQ33bmoYvmsnl4im9TD335D6beg5rb9Z6kkghqRRDpLAn7ZXVf9MNwErc1IAlXXVlbCsT3hQi7YgAAAAIFscYJAA")
         if not self.SESSION1:
             self.SESSION1 = getenv("SESSION")
         if not self.SESSION1:
@@ -54,6 +54,18 @@ class Config:
 
         self.STRING4 = getenv("STRING_SESSION4")
         self.STRING5 = getenv("STRING_SESSION5")
+        
+        # Ensure that whatever variable is used doesn't have leading/trailing whitespaces
+        if self.SESSION1:
+            self.SESSION1 = self.SESSION1.strip()
+        if self.SESSION2:
+            self.SESSION2 = self.SESSION2.strip()
+        if self.SESSION3:
+            self.SESSION3 = self.SESSION3.strip()
+        if self.STRING4:
+            self.STRING4 = self.STRING4.strip()
+        if self.STRING5:
+            self.STRING5 = self.STRING5.strip()
 
         # Support
         self.SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/Humy_Music_Kanal")
