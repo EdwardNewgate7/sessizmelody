@@ -13,16 +13,16 @@ def _env_bool(key: str, default: bool = False) -> bool:
 class Config:
     def __init__(self):
         # Core
-        self.API_ID = int(getenv("API_ID", "39772794"))
-        self.API_HASH = getenv("API_HASH", "2ee2ed0c08035c3264f864e5e12f37c7")
-        self.BOT_TOKEN = getenv("BOT_TOKEN", "8227251406:AAHzB02VRGFiV2VzXP51R5l95PozgxUbMqQ")
+        self.API_ID = int(getenv("API_ID", "39221561"))
+        self.API_HASH = getenv("API_HASH", "f450c818f9453c938e624fbdcb904998")
+        self.BOT_TOKEN = getenv("BOT_TOKEN", "7318798866:AAFsSE6lJqf_QYMAV_1XZhnoAdMMwlu-oA0")
         self.MONGO_URL = getenv("MONGO_URL", "mongodb+srv://mongoguess:guessmongo@cluster0.zcwklzz.mongodb.net/?retryWrites=true&w=majority") or getenv("MONGO_DB_URI")
         self.LOGGER_ID = int(getenv("LOGGER_ID", "-1003682183380"))
         self.OWNER_ID = int(getenv("OWNER_ID", "7932897819"))
-        self.OWNER_USERNAME = getenv("OWNER_USERNAME", "@Qu1iyef")
-        self.BOT_USERNAME = getenv("BOT_USERNAME", "@SessizMelodimuzik_bot")
-        self.BOT_NAME = getenv("BOT_NAME", "SessizMelodi")
-        self.ASSUSERNAME = getenv("ASSUSERNAME", "SessizMelodi Asistant")
+        self.OWNER_USERNAME = getenv("OWNER_USERNAME", "@Dijvar_3635")
+        self.BOT_USERNAME = getenv("BOT_USERNAME", "@Nevroz_stran_bot")
+        self.BOT_NAME = getenv("BOT_NAME", "Nevroz_starn")
+        self.ASSUSERNAME = getenv("ASSUSERNAME", "NevrozStarn Asistant")
 
         # Limits
         self.DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 60))
@@ -43,7 +43,7 @@ class Config:
         )
 
         # Sessions
-        self.SESSION1 = getenv("SESSION1", "AQJe4noAgi-ZXz-72BT1l4sx9wEsXeaABJu_yA1z8YA9J5KzTuAffQ3a39bHiZot2n56Ud00qoTH4RK41ZdU_XG1qaCj7wdQTBgxlZW-liwAxD0LjPk7Gl2z9Jokj0VUueNd2Nq2Ws4Go49w-m6NdLlltcAlivkinfXkci7pIF0CiDab_1n4kn-5V6EobrlsToB6ywPIFleZuR_JwS4VCrVSsiwWhOe9bL1oBGjAOm4fjim8sIiTkdL60a3a6ZuljMx0uWhTms3fTxowXu55YeT7tz1ANU9UF0HakrHybjZvqGxpu5sIXIcwWxYczsRUfW7ZlZZKqXX3S0f3mQ6d2Dd-MJf8bAAAAAHacLhZAA")
+        self.SESSION1 = getenv("SESSION1", "AQJWeTkAukuGJzEaxVO4E1JrcUcx6z_UOQMosvLf_nCkK-IXYnBXQvI5qjya_LQSQQCLXITmPUgK7HkTCMsyDzKdunD6sQtuWNZ480NM61MjTdwaa95TfNwLDF2x-LevuAYjv2tIwrU29fdShN2D1qiUqevSrk0yQdozENIhU5AoAtjVzIQnW0LN2AMkWapki9E4sr__VCapU6oe7Ysw-9wzSc8Z-mq0S24jlf5p4GvWZAgLfuilSGryU9ugWTctHCFTPL1ty9ypNsRdMlDQ33bmoYvmsnl4im9TD335D6beg5rb9Z6kkghqRRDpLAn7ZXVf9MNwErc1IAlXXVlbCsT3hQi7YgAAAAIFscYJAA ")
         if not self.SESSION1:
             self.SESSION1 = getenv("SESSION")
         if not self.SESSION1:
@@ -56,16 +56,16 @@ class Config:
         self.STRING5 = getenv("STRING_SESSION5")
 
         # Support
-        self.SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/dolubirkafa")
-        self.SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/SessizMelodim")
+        self.SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/Humy_Music_Kanal")
+        self.SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/Humay_Music_Duyuru")
 
         # Playback / behavior
         self.AUTO_END = _env_bool("AUTO_END", False)
         self.AUTO_LEAVE = _env_bool("AUTO_LEAVE", False)
         self.VIDEO_PLAY = _env_bool("VIDEO_PLAY", True)
-        cookie_env = getenv("COOKIES_URL", "https://batbin.me/grandmothers")
+        cookie_env = getenv("COOKIES_URL", "https://batbin.me/repulse")
         if not cookie_env:
-            cookie_env = getenv("COOKIE_URL", "https://batbin.me/grandmothers")
+            cookie_env = getenv("COOKIE_URL", "https://batbin.me/repulse")
         self.COOKIES_URL = [
             url for url in cookie_env.split(" ")
             if url and "batbin.me" in url
