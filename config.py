@@ -25,7 +25,7 @@ class Config:
         self.ASSUSERNAME = getenv("ASSUSERNAME", "NevrozStarn Asistant")
 
         # Limits
-        self.DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 60))
+        self.DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 890))
         self.DURATION_LIMIT = self.DURATION_LIMIT_MIN * 320
         self.QUEUE_LIMIT = int(getenv("QUEUE_LIMIT", 20))
         self.PLAYLIST_LIMIT = int(
