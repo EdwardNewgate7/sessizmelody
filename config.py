@@ -26,14 +26,14 @@ class Config:
 
         # Limits
         self.DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 890))
-        self.DURATION_LIMIT = self.DURATION_LIMIT_MIN * 320
+        self.DURATION_LIMIT = self.DURATION_LIMIT_MIN * 890
         self.QUEUE_LIMIT = int(getenv("QUEUE_LIMIT", 20))
         self.PLAYLIST_LIMIT = int(
             getenv("PLAYLIST_LIMIT", getenv("PLAYLIST_FETCH_LIMIT", 20))
         )
         self.SONG_DOWNLOAD_DURATION = int(getenv("SONG_DOWNLOAD_DURATION", "1200"))
         self.SONG_DOWNLOAD_DURATION_LIMIT = int(
-            getenv("SONG_DOWNLOAD_DURATION_LIMIT", "1800")
+            getenv("SONG_DOWNLOAD_DURATION_LIMIT", "18000")
         )
         self.TG_AUDIO_FILESIZE_LIMIT = int(
             getenv("TG_AUDIO_FILESIZE_LIMIT", "157286400")
