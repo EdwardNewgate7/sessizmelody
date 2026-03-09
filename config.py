@@ -13,16 +13,16 @@ def _env_bool(key: str, default: bool = False) -> bool:
 class Config:
     def __init__(self):
         # Core
-        self.API_ID = int(getenv("API_ID", "39221561"))
-        self.API_HASH = getenv("API_HASH", "f450c818f9453c938e624fbdcb904998")
-        self.BOT_TOKEN = getenv("BOT_TOKEN", "7318798866:AAFsSE6lJqf_QYMAV_1XZhnoAdMMwlu-oA0")
+        self.API_ID = int(getenv("API_ID", "39772794"))
+        self.API_HASH = getenv("API_HASH", "2ee2ed0c08035c3264f864e5e12f37c7")
+        self.BOT_TOKEN = getenv("BOT_TOKEN", "8227251406:AAHzB02VRGFiV2VzXP51R5l95PozgxUbMqQ")
         self.MONGO_URL = getenv("MONGO_URL", "mongodb+srv://mongoguess:guessmongo@cluster0.zcwklzz.mongodb.net/?retryWrites=true&w=majority") or getenv("MONGO_DB_URI")
         self.LOGGER_ID = int(getenv("LOGGER_ID", "-1003682183380"))
         self.OWNER_ID = int(getenv("OWNER_ID", "7932897819"))
-        self.OWNER_USERNAME = getenv("OWNER_USERNAME", "@Dijvar_3635")
-        self.BOT_USERNAME = getenv("BOT_USERNAME", "@Nevroz_stran_bot")
-        self.BOT_NAME = getenv("BOT_NAME", "Nevroz_starn")
-        self.ASSUSERNAME = getenv("ASSUSERNAME", "NevrozStarn Asistant")
+        self.OWNER_USERNAME = getenv("OWNER_USERNAME", "@Qu1iyef")
+        self.BOT_USERNAME = getenv("BOT_USERNAME", "@SessizMelodimuzik_bot")
+        self.BOT_NAME = getenv("BOT_NAME", "SessizMelodi")
+        self.ASSUSERNAME = getenv("ASSUSERNAME", "SessizMelodi Asistant")
 
         # Limits
         self.DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 890))
@@ -43,7 +43,7 @@ class Config:
         )
 
         # Sessions
-        self.SESSION1 = getenv("SESSION1", "BAH8sMMArT-pJDTRi0VdqVpn0HwFOnYV105OAXTi5vKiojSbNFjGSfI_TnO3DIUYbWtc2I6wlJl2p5W1dn351UMmnyx11PzNkNxDTNf_b0_DHdrItHoHDmYRBPnQyPmBXsqsJ7rRgZzlVGAC0huRulO0jIu5IG3LHyG8pIAGmrbj0F3-tqQ-xLipoQB2PXdGf82na48prZ4XdaoEnIGB5QqSPdm49GPoIp_5vXOoIecypPKO9ZrPLpucZLJZY5T9eFZ2laynViUA-zkAe6EKTT_eqkV1yUZ03b-S19OhCLTAlvv4nGV303fo3zNhiCahpB2u-PpDeY9Ozaen-6ZqiVHSSBKZNAAAAAIMGeqQAA")
+        self.SESSION1 = getenv("SESSION1", "AQJe4noAwZ70HD_ShX4vAd0PjG0pPAtz46zZUmChAQrrpiVW2PfWXzGLZmyKpRuMxD0pQ95U0j6HqSVh98apWfzRCPkW9k1efH2NmYbx2EDAoeTOavgOoChN3DRspk6FqvM9W74g9peh4QzfPfsL03jMV2uyyCNp2bmN0LrxscnD1eVTBNI42AjIrWeSU_9lrabFBAoob9cWFdqx6uon0ukpsE1vHxP9Goecee5EvxnFPnfb6Sov8RwKs1Dw194o0Y5TmhxDjldHXGlTeL0Fc3zDsuiol-CafE47pN0zANLveCDJO3YSxLp5LK_ff-EXxfh2WpcGMmhisKD3LIC_BPAOpmwMtgAAAAHacLhZAA")
         if not self.SESSION1:
             self.SESSION1 = getenv("SESSION")
         if not self.SESSION1:
