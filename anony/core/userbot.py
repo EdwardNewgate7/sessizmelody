@@ -8,28 +8,38 @@ from pyrogram import Client
 from anony import config, logger
 
 
-class Userbot(Client):
+class Userbot:
     def __init__(self):
         """
         Initializes the userbot with multiple clients.
 
-        This method sets up clients for the userbot using predefined session strings.
-        Each client is assigned a unique name based on the key in the `clients` dictionary.
+        This method sets up clients for the userbot using predefined session strings from config.
         """
         self.clients = []
-        clients = {"one": "SESSION1", "two": "SESSION2", "three": "SESSION3"}
-        for key, string_key in clients.items():
-            name = f"AnonyUB{key[-1]}"
-            session = getattr(config, string_key)
-            setattr(
-                self,
-                key,
-                Client(
-                    name=name,
-                    api_id=config.API_ID,
-                    api_hash=config.API_HASH,
-                    session_string=session,
-                ),
+        self.one = None
+        self.two = None
+        self.three = None
+
+        if config.SESSION1:
+            self.one = Client(
+                name="AnonyUB1",
+                api_id=config.API_ID,
+                api_hash=config.API_HASH,
+                session_string=config.SESSION1,
+            )
+        if config.SESSION2:
+            self.two = Client(
+                name="AnonyUB2",
+                api_id=config.API_ID,
+                api_hash=config.API_HASH,
+                session_string=config.SESSION2,
+            )
+        if config.SESSION3:
+            self.three = Client(
+                name="AnonyUB3",
+                api_id=config.API_ID,
+                api_hash=config.API_HASH,
+                session_string=config.SESSION3,
             )
 
     async def boot_client(self, num: int, ub: Client):
